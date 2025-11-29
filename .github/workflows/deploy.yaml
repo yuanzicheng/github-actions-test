@@ -1,6 +1,7 @@
 name: Deploy测试
 run-name: ${{ github.actor }} started a deployment
-
+permissions:
+  contents: write
 on: 
   push:
     branches: [ main ]
@@ -14,6 +15,10 @@ jobs:
     - run: echo "Hello World" && echo $SHELL && echo $HOME
       name: 输出指定环境变量
     - run: bun -v
+    - uses: actions/checkout@v6
+    - run: |
+        bun install
+        bun run build
     # - run: node -v
     # - run: curl -fsSL https://bun.sh/install | bash
     # - run: export PATH=$PATH:$HOME/.bun/bin
