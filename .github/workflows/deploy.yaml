@@ -8,4 +8,5 @@ jobs:
     - run: echo "Hello World" && echo $SHELL
     - run: node -v
     - run: curl -fsSL https://bun.sh/install | bash
+    - run: export PATH=$PATH:$HOME/.bun/bin
     - run: bun -v
