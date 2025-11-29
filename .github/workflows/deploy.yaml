@@ -7,5 +7,4 @@ jobs:
     - run: ls
     - run: echo "Hello World"
     - run: node -v
-    - run: bun -v
     - run: snap install bun
