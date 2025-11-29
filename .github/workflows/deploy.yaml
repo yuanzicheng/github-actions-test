@@ -12,7 +12,6 @@ jobs:
     steps:
     - run: pwd
     - run: ls -la
-    - run: git version
     - name: Setup Git
       run: |
         apk add git
