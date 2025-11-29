@@ -6,3 +6,5 @@ jobs:
     - run: pwd
     - run: ls
     - run: echo "Hello World"
+    - run: bun -v
+    - run: node -v
