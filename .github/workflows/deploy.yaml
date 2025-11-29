@@ -16,9 +16,12 @@ jobs:
       name: 输出指定环境变量
     - run: bun -v
     - uses: actions/checkout@v6
-    - run: |
-        bun install
-        bun run build
+    - run: bun install
+    - run: bun run build
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
     # - run: node -v
     # - run: curl -fsSL https://bun.sh/install | bash
     # - run: export PATH=$PATH:$HOME/.bun/bin
