@@ -19,6 +19,7 @@ jobs:
     - run: echo "Hello World" && echo $SHELL && echo $HOME
       name: 输出指定环境变量
     - run: curl -fsSL https://bun.sh/install | bash
+    - run: echo "PATH=$PATH:$HOME/.bun/bin" >> $GITHUB_ENV
     - run: bun -v
     - uses: actions/checkout@v6
     - run: bun install
