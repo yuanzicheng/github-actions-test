@@ -12,6 +12,7 @@ jobs:
     - run: pwd
     - run: ls -la
     - run: echo "Hello World" && echo $SHELL && echo $HOME
+      name: 输出指定环境变量
     - run: bun -v
     # - run: node -v
     # - run: curl -fsSL https://bun.sh/install | bash
