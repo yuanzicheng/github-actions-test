@@ -7,4 +7,5 @@ jobs:
     - run: ls
     - run: echo "Hello World"
     - run: node -v
-    - run: snap info bunjs
+    - run: curl -fsSL https://bun.sh/install | bash
+    - run: bun -v
