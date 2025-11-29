@@ -12,6 +12,11 @@ jobs:
     steps:
     - run: pwd
     - run: ls -la
+    - run: git version
+    - name: Setup Git
+      run: |
+        apk add git
+        git version
     - run: echo "Hello World" && echo $SHELL && echo $HOME
       name: 输出指定环境变量
     - run: bun -v
